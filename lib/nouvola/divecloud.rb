@@ -35,5 +35,20 @@ module Nouvola
       end
     end
     
+    def hook (plan_id, url)
+      payload = {
+        "event":"run_plan", 
+        "resource_id":"#{plan_id}"
+        "url":"#{url}"
+      }
+      @url = BASE_PATH+"/api/v1/hooks"
+      uri = URI.parse(@url)
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      request = Net::HTTP::Post.new(uri.request_uri)
+      request['x-api'] = @key
+      request['Content-Type'] = 'application/json'
+      request.body = payload
+    end
   end
 end
