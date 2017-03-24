@@ -38,7 +38,7 @@ module Nouvola
     def hook (plan_id, url)
       payload = {
         "event":"run_plan", 
-        "resource_id":"#{plan_id}"
+        "resource_id":"#{plan_id}",
         "url":"#{url}"
       }
       @url = BASE_PATH+"/api/v1/hooks"
