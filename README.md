@@ -32,3 +32,13 @@ To Get Test Results
     test = Nouvola::Divecloud.new(key)
     results = test.results(plan_id)
     `
+    
+To Set Callback
+
+    `
+    key = '3x5mpl3str1ng'
+    plan_id = 4429
+    url = "http://requestb.in/pj748cpj"
+    test = Nouvola::Divecloud.new(key)
+    results = test.hook(plan_id, url)
+    `
