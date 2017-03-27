@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/nouvola.svg)](https://badge.fury.io/rb/nouvola)
+
 # Nouvola Gem
 
 This gem is  a client wrapper for  Nouvala's API.
@@ -28,9 +30,9 @@ To Get Test Results
 
     `
     key = '3x5mpl3str1ng'
-    plan_id = 4101
+    test_id = 5209
     test = Nouvola::Divecloud.new(key)
-    results = test.results(plan_id)
+    results = test.results(test_id)
     `
     
 To Set Callback
